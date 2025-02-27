@@ -12,7 +12,7 @@ pipeline {
         description: 'description',
             name: "ARTIFACT_NAME"
             )
-        booleanParam defaultValue: true, name: 'FAIL_PIPELINE'
+        booleanParam defaultValue: false, name: 'FAIL_PIPELINE'
         booleanParam defaultValue: true, name: 'RUN_TEST'
     }
    
@@ -68,7 +68,7 @@ pipeline {
         }
         stage("Dynamic"){
             steps{
-                when { branch: "feature/multi/*" }
+                when { branch "feature/multi/*" }
                 }
             }
         stage("Tests"){
