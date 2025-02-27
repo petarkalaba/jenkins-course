@@ -56,13 +56,13 @@ pipeline {
                     )
                 }
             
-            withCredentials(
-                [usernamePassword(credentialsId: 'CRED_ID', passwordVariable: "psw", usernameVariable: "usr")
-                    ])
-                    {
-                        echo psw
-                        echo usr
-                    }
+           // withCredentials(
+             //   [usernamePassword(credentialsId: 'CRED_ID', passwordVariable: "psw", usernameVariable: "usr")
+              //      ])
+              //      {
+               //         echo psw
+                //        echo usr
+                 //   }
             }
             
         }
