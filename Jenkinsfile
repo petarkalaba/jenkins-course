@@ -66,6 +66,11 @@ pipeline {
             }
             
         }
+        stage("Dynamic"){
+            steps{
+                when { branch: "feature/multi/*" }
+                }
+            }
         stage("Tests"){
             when {
                 equals expected: true, 
