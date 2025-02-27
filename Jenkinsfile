@@ -67,8 +67,9 @@ pipeline {
             
         }
         stage("Dynamic"){
+            when { branch "feature/multi/*" }
             steps{
-                when { branch "feature/multi/*" }
+                echo "This is Dynamic stage!"
                 }
             }
         stage("Tests"){
